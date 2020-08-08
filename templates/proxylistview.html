@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Home Page</title>
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="static/css/addproxyform.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+
+<div class="w3-bar w3-green">
+  <a href="#" class="w3-bar-item w3-button w3-right">About</a>
+  <a href="/" class="w3-bar-item w3-button w3-right">Back to Home</a>
+    <button class="button1 " onclick=" document.getElementById('id01').style.display='block'">Add Proxy</button>
+    <button class="button1 "  onclick="document.getElementById('id02').style.display='block'">Update proxy</button>
+    <button class="button2 "  onclick="deleteFunction()">Delete</button>
+
+  </div>
+</div>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" id="addproxytoDB">
+    <div class="container">
+      <h1>Add Proxy </h1>
+      <p>Please provide the IP and Port address to ADD a new entry </p>
+      <hr>
+      <label for="IP"><b>IP Address</b></label>
+      <input type="text" onfocus="this.value=''" placeholder="Enter IP address" name="IP" id="inputID1" required>
+
+      <label for="Port"><b>Port</b></label>
+      <input type="text" onfocus="this.value=''" placeholder="Enter Port" name="Port" id="inputID2" required>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbutton2">Cancel</button>
+        <button type="submit" class="addbutton1" id="btnSubmit">Add</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" id="updateproxytoDB">
+    <div class="container">
+      <h1>Update Proxy </h1>
+      <p> Please provide the proxy address which needs to be updated </p>
+      <hr>
+      <label for="oldIP"><b>IP Address</b></label>
+      <input type="text" onfocus="this.value=''" placeholder="Enter IP address" name="oldIP" id="updateinputID1" required>
+
+      <p>Please provide the IP and Port address to update the entry </p>
+      <hr>
+      <label for="newIP"><b>IP Address</b></label>
+      <input type="text" onfocus="this.value=''" placeholder="Enter New IP address" name="newIP" id="updateinputID2" required>
+
+      <label for="newPort"><b>Port</b></label>
+      <input type="text" onfocus="this.value=''" placeholder="Enter New Port" name="newPort" id="updateinputID3" required>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbutton2">Cancel</button>
+        <button type="submit" class="addbutton1" id="updatebtnSubmit">Update</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<section>
+  <!--for demo wrap-->
+
+  <h4>Proxy Lists</h4>
+
+  <div>
+    <table id="viewTable" class="display" >
+      <thead>
+        <tr>
+          <th>IP</th>
+          <th>Port</th>
+          <th>Basic Test Date</th>
+          <th>Inserted Date</th>
+          <th>Last Updated</th>
+          <th>Last URL Test Date</th>
+
+        </tr>
+      </thead>
+    </table>
+  </div>
+</section>
+
+<script>
+
+</script>
+
+</body>
+<!-- follow me template -->
+<script src="static/js/proxylist.js"></script>
+
+</html>
+
+

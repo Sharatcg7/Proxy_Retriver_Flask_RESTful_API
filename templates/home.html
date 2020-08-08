@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Home Page</title>
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+
+<body>
+
+
+<div class="w3-bar w3-green">
+  <a href="#" class="w3-bar-item w3-button">About</a>
+</div>
+
+<section>
+    <div>
+    <img src="{{ url_for('static', filename = 'images/TU_Chemnitz_Logo_gruen_RGB.png')}}" width='200px' height='100px' alt="TU Chemnitz" >
+
+     <form class="child-div1 " style="float:right; position:relative; top:60px; " id="testURL">
+            <label>Test URL:</label>
+            <input type="text" onfocus="this.value=''" name="url" placeholder="eg: yahoo.com" id="inputID"/>
+            <input type="submit" value="submit" id="btnSubmit" />
+            <img id='loader' style='display: none;' src="{{ url_for('static', filename = 'images/ajax-loader.gif')}}"  width='45px' height='45px'/>
+     </form>
+
+    </div>
+
+</section>
+
+<div class="row">
+<h4> proxy list provider </h4>
+  <div class = "wrapper">
+      <div class="scrollbar"  id="style-default">
+          <div class="column force-overflow" style="margin-bottom : 10px" id="body" > </br> </div>
+      </div>
+  </div>
+
+  </br>
+
+  <div>
+      <a href="/proxies" > <button class="button"><span>View proxy list </span></button></a>
+  </div>
+
+  <h4>Test URLs Details</h4>
+  <div class = "wrapper">
+      <div class="scrollbar1" id="style-1">
+        <div class="column force-overflow" id="bodytest"> </br> </div>
+      </div>
+  </div>
+</div>
+
+
+</body>
+<!-- follow me template -->
+<script src="static/js/home.js"></script>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <!-- meta tags -->
+    <meta charset="UTF-8">
+
+    <!-- Import our custom stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" >
+    <!-- Import the Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+    <!-- Import the w3schools stylesheet -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Application Home Page</title>
+
+</head>
+<body>
+
+<div class="w3-bar w3-green">
+  <a href="#" class="w3-bar-item w3-button">About</a>
+</div>
+
+<section>
+    <img src="{{ url_for('static', filename = 'images/TU_Chemnitz_Logo_gruen_RGB.png')}}" alt="TU Chemnitz">
+
+    <div class="flexContainer">
+        <input type="password" class="inputField">
+        <button type="submit"><img src="arrow.png" alt="Arrow Icon"></button>
+    </div>
+
+
+</section>
+
+<section>
+  <!--for demo wrap-->
+  <h3>Proxy Provides</h3>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0.9">
+      <thead>
+        <tr>
+          <th>URL</th>
+          <th>Details</th>
+          <th>Last update</th>
+          <th>Last attempt</th>
+        </tr>
+      <tbody>
+        <tr>
+          <td><a href="https://www.sslproxies.org/">https://www.sslproxies.org/</a></td>
+          <td>AUSTRALIAN COMPANY </td>
+          <td>$1.38</td>
+          <td>+2.01</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.sslproxies.org/">https://www.sslproxies.org/</a></td>
+          <td>AUSENCO</td>
+          <td>$2.38</td>
+          <td>-0.01</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+    <div class="row">
+<h4> proxy list provider </h4>
+  <div class = "wrapper">
+      <div class="scrollbar" id="style-default">
+        <div class="column force-overflow" id="div4">
+            <div class="card" >
+                <div >
+                <h5 >Base address(URL) :  </h5>
+                <h5 >Extraction details : </h5>
+                <h5 >Last update on :</h5>
+                <h5 >No of records found :    </h5>
+                </div>
+
+            </div>
+
+            </br>
+
+        </div>
+      </div>
+  </div>
+
+
+
+</section>
+
+<section>
+    <a href="/proxies" > <button class="button"><span>Click here to view proxy list </span></button>
+    </a>
+</section>
+
+
+<!-- Import our custom JavaScript -->
+<script src="{{ url_for('static', filename= 'js/home.js')}}"></script>
+<!-- Import jquery 3.3.1 slim min -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Import Bootstrap bundle -->
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
+</body>
+<!-- follow me template -->
+
+</html>
+
+
+
