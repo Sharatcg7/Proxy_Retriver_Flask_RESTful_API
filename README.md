@@ -18,4 +18,4 @@ then go to http://localhost:5000/ for the home page of the application
 
 ## Authors
 
-* **Sharat Gujamagadi** - *552567* - 
+* **Sharat Gujamagadi** - 
